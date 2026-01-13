@@ -15,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HomeContent = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+
   const texts = ['Innovate.', 'Succeed.'];
   const speed = 100;
   const pauseBetweenEffects = 500;
@@ -23,30 +24,23 @@ const HomeContent = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  /* TYPEWRITER EFFECT */
   useEffect(() => {
     let timeout: NodeJS.Timeout;
-
     const currentText = texts[textIndex];
     const nextIndex = (textIndex + 1) % texts.length;
 
     if (!isDeleting && displayText.length < currentText.length) {
-      // Typing
       timeout = setTimeout(() => {
         setDisplayText(currentText.slice(0, displayText.length + 1));
       }, speed);
-    }
-    else if (!isDeleting && displayText.length === currentText.length) {
-      // Pause before delete
+    } else if (!isDeleting && displayText.length === currentText.length) {
       timeout = setTimeout(() => setIsDeleting(true), pauseBetweenEffects);
-    }
-    else if (isDeleting && displayText.length > 0) {
-      // Deleting
+    } else if (isDeleting && displayText.length > 0) {
       timeout = setTimeout(() => {
         setDisplayText(currentText.slice(0, displayText.length - 1));
       }, speed);
-    }
-    else if (isDeleting && displayText.length === 0) {
-      // Switch word
+    } else {
       setIsDeleting(false);
       setTextIndex(nextIndex);
     }
@@ -54,12 +48,12 @@ const HomeContent = () => {
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, textIndex]);
 
+  /* GSAP ANIMATIONS */
   useLayoutEffect(() => {
     if (!containerRef.current) return;
 
     const ctx = gsap.context(() => {
 
-      /* HERO TEXT */
       gsap.from("#management-text", {
         y: 80,
         opacity: 0,
@@ -67,7 +61,6 @@ const HomeContent = () => {
         ease: "power3.out",
       });
 
-      /* ABOUT SECTION */
       gsap.from("#aboutus .col-lg-6", {
         scrollTrigger: {
           trigger: "#aboutus",
@@ -77,10 +70,8 @@ const HomeContent = () => {
         opacity: 0,
         stagger: 0.25,
         duration: 1,
-        ease: "power3.out",
       });
 
-      /* WHY CHOOSE US BOXES */
       gsap.from(".whychoose-box", {
         scrollTrigger: {
           trigger: ".why-choose-us",
@@ -90,10 +81,8 @@ const HomeContent = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 0.8,
-        ease: "power3.out",
       });
 
-      /* PROJECT CARDS */
       gsap.from(".project-container", {
         scrollTrigger: {
           trigger: ".project-container",
@@ -103,10 +92,8 @@ const HomeContent = () => {
         opacity: 0,
         stagger: 0.2,
         duration: 0.8,
-        ease: "power2.out",
       });
 
-      /* CLIENT LOGOS */
       gsap.from(".logos-slide img", {
         scrollTrigger: {
           trigger: ".clients",
@@ -116,13 +103,13 @@ const HomeContent = () => {
         opacity: 0,
         stagger: 0.1,
         duration: 0.6,
-        ease: "power2.out",
       });
 
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
+
 
   return (
     <main ref={containerRef}>

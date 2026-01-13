@@ -2889,32 +2889,33 @@ body.menu-open {
 
 /* Faqs Ends */
 /* Home Services starts */
-.home-service-section {
+.homeservicesection {
   padding: 80px 6%;
   background: linear-gradient(120deg, #f4f4f4, #fafafa);
 }
 
 /* Header */
-.service-header {
+.homeservicesection-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
-.service-header h2 {
+.homeservicesection-header h2 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.service-header p {
+.homeservicesection-header p {
   max-width: 520px;
   color: #666;
   line-height: 1.6;
 }
 
-.primary-btn {
+.homeservicesection-btn {
   background: var(--primary);
   color: #000;
   border: none;
@@ -2922,104 +2923,106 @@ body.menu-open {
   border-radius: 30px;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 /* Grid */
-.service-grid {
+.homeservicesection-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
 /* Cards */
-.service-card {
+.homeservicesection-card {
   background: #ffffff;
   border-radius: 18px;
   padding: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
+  transform-style: preserve-3d; /* for tilt */
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
+.homeservicesection-card:hover {
+  transform: translateY(-6px) rotateX(2deg) rotateY(2deg); /* subtle 3D tilt */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* Active Card */
-.service-card.active {
+.homeservicesection-card.active {
   background: var(--light);
-  color: #ffffff;
-  transform: rotate(-6deg);
-  position: relative;
+  color: #fff;
+  transform: rotate(-6deg) scale(1.02); /* active card tilt + slightly bigger */
+  z-index: 5;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+.homeservicesection-card.active .homeservicesection-icon {
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.service-card.active p {
+/* Optional: smooth rotation on active card when hover */
+.homeservicesection-card.active:hover {
+  transform: rotate(-6deg) scale(1.03) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.homeservicesection-card.active p {
   color: #cfcfcf;
 }
-.service-card.active * {
+
+.homeservicesection-card.active * {
   transform: rotate(0deg);
 }
 
-/* Shake animation ONLY on hover */
-.service-card.active:hover {
-  animation: activeShake 0.45s ease-in-out;
-}
-
-/* Shake animation on hover (ACTIVE CARD ONLY) */
-.service-card.active:hover {
+.homeservicesection-card.active:hover {
   animation: shake 0.5s ease-in-out;
 }
 
 @keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-4px);
-  }
-  50% {
-    transform: translateX(4px);
-  }
-  75% {
-    transform: translateX(-3px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
 }
 
 /* Icon */
-.icon {
-  width: 48px;
-  height: 48px;
+.homeservicesection-icon {
+  width: 60px;   /* adjust size */
+  height: 60px;
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  font-weight: 700;
   margin-bottom: 18px;
+  overflow: hidden;
 }
 
-.service-card.active .icon {
+.homeservicesection-icon img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.homeservicesection-card.active .homeservicesection-icon {
   background: rgba(255, 255, 255, 0.15);
 }
 
 /* Content */
-.service-card h3 {
+.homeservicesection-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.service-card p {
+.homeservicesection-card p {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 20px;
   color: #555;
 }
 
-.learn-more {
+.homeservicesection-learnmore {
   font-weight: 600;
   font-size: 14px;
   display: inline-flex;
@@ -3028,17 +3031,50 @@ body.menu-open {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .service-grid {
+@media (max-width: 1200px) {
+  .homeservicesection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .homeservicesection-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-header {
+  .homeservicesection-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
+
+  .homeservicesection-btn {
+    align-self: start;
+  }
 }
+
+@media (max-width: 480px) {
+  .homeservicesection {
+    padding: 60px 4%;
+  }
+
+  .homeservicesection-header h2 {
+    font-size: 28px;
+  }
+
+  .homeservicesection-header p {
+    font-size: 14px;
+  }
+
+  .homeservicesection-card h3 {
+    font-size: 18px;
+  }
+
+  .homeservicesection-card p {
+    font-size: 13px;
+  }
+}
+
 /* Home Services Ends */
 /* Home Project Industry Starts */
 .home-pro-inc-section {
@@ -3266,7 +3302,7 @@ body.menu-open {
 }
 
 .testimonials-header span {
-  color: #9aa6ff;
+  color: var(--primary);
 }
 .testimonial-bg {
   position: absolute;
@@ -3296,6 +3332,7 @@ body.menu-open {
   width: 100%;
   z-index: 3; /* ABOVE IMAGE */
   pointer-events: none;
+  z-index: 10;
 }
 
 .testimonial-avatars img {
@@ -3307,6 +3344,7 @@ body.menu-open {
   padding: 6px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   object-fit: contain;
+  z-index: 10;
 }
 .testimonial-avatars img:nth-child(1) { left: 8%; top: 40px; }
 .testimonial-avatars img:nth-child(2) { left: 26%; top: 100px; }

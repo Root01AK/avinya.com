@@ -7,41 +7,42 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
     {
-        name: 'Yeray Rosales',
+        name: 'Holiday Inn Express',
         text:
-            'I believe in lifelong learning and this is the best place to learn from experts with step-by-step courses. I’ve learned a lot and recommended it to my friends.',
-        time: '12 days ago',
-        avatar: '/logos/client1.png',
+            'Avinya Construction Management handled our project with exceptional professionalism. From planning to execution, everything was transparent, well-coordinated, and delivered on time.',
+        time: '10 days ago',
+        avatar: '/clients/HolidayInn.png',
     },
     {
-        name: 'Lew Silverton',
+        name: 'Ups Inc',
         text:
-            'I really like the content they’ve offered for marketing and sales. I’ve purchased many classes and all of them are really good.',
+            'What stood out was their attention to detail and cost control. The team ensured quality standards were met without delays or budget overruns.',
+        time: '3 weeks ago',
+        avatar: '/clients/ups.png',
+    },
+    {
+        name: 'Sangam Group',
+        text:
+            'We trusted Avinya Construction Management with our commercial project, and they exceeded expectations. Clear communication, disciplined execution, and reliable delivery.',
         time: '1 month ago',
-        avatar: '/logos/client2.png',
+        avatar: '/clients/Sangam.png',
     },
     {
-        name: 'Neville Griffin',
+        name: 'Starbucks Corp',
         text:
-            'Skeptical at first, but the support and structured learning convinced me quickly. Highly recommended.',
+            'Their project management approach is structured and efficient. Regular updates, on-site supervision, and strong vendor coordination made the entire process smooth.',
         time: '2 months ago',
-        avatar: '/logos/client3.png',
+        avatar: '/clients/starbucks.png',
     },
     {
-        name: 'Neville Griffin',
+        name: 'Comfort Inn',
         text:
-            'Skeptical at first, but the support and structured learning convinced me quickly. Highly recommended.',
-        time: '2 months ago',
-        avatar: '/logos/client3.png',
-    },
-    {
-        name: 'Neville Griffin',
-        text:
-            'Skeptical at first, but the support and structured learning convinced me quickly. Highly recommended.',
-        time: '2 months ago',
-        avatar: '/logos/client3.png',
+            'From pre-construction planning to final handover, Avinya demonstrated professionalism and accountability. Highly recommended for quality-driven construction projects.',
+        time: '3 months ago',
+        avatar: '/clients/comfortinn.png',
     },
 ];
+
 
 export default function HomeTestimonialsSection() {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -95,8 +96,8 @@ export default function HomeTestimonialsSection() {
             {/* HEADER */}
             <div className="testimonials-header">
                 <h2>
-                    Helping thousands of students <br />
-                    <span>to succeed with speed</span>
+                    Trusted by Clients to Deliver Quality Construction <br />
+                    <span>with Speed and Precision</span>
                 </h2>
             </div>
 
@@ -108,7 +109,7 @@ export default function HomeTestimonialsSection() {
             {/* FLOATING CLIENT LOGOS */}
             <div className="testimonial-avatars">
                 <img src="/clients/comfortinn.png" />
-                <img src="/clients/hiltoninn.svg" />
+                <img src="/clients/Hilton.png" />
                 <img src="/clients/Hyatt.png" />
                 <img src="/clients/Sangam.png" />
                 <img src="/clients/ups.png" />

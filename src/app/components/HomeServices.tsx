@@ -1,24 +1,27 @@
 'use client';
 import Link from "next/link";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
 gsap.registerPlugin(ScrollTrigger);
+
+const services = [
+  { logo: '/logo/logo.png', title: 'Pre-Construction Services', desc: 'Integrated Construction Management, Design & Engineering, and Pre-Construction Solutions for Seamless Project Delivery.' },
+  { logo: '/logo/logo.png', title: 'Design and Engineering', desc: 'From Design & Engineering to Pre-Construction Planning and Full Construction Management — We Cover Every Step.' },
+  { logo: '/logo/logo.png', title: 'Construction Management', desc: 'Integrated Construction Management, Design & Engineering, and Pre-Construction Solutions for Seamless Project Delivery.' },
+];
 
 const HomeServices = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0); // default first card active
 
   useEffect(() => {
     if (!sectionRef.current) return;
 
     gsap.fromTo(
-      sectionRef.current.querySelectorAll('.service-card'),
-      {
-        y: 80,
-        opacity: 0,
-      },
+      sectionRef.current.querySelectorAll('.homeservicesection-card'),
+      { y: 80, opacity: 0 },
       {
         y: 0,
         opacity: 1,
@@ -34,57 +37,37 @@ const HomeServices = () => {
   }, []);
 
   return (
-    <section className="home-service-section" ref={sectionRef}>
-      <div className="service-header">
+    <section className="homeservicesection" ref={sectionRef}>
+      <div className="homeservicesection-header">
         <div>
           <h2>Our Services</h2>
           <p>
-            Unleashing Comprehensive Digital Marketing Services Tailored to
-            Elevate Your Online Presence and Boost Your Success.
+            Managing Every Aspect of Your Construction Projects with Expertise, Efficiency, and Reliability.
           </p>
         </div>
         <Link href="/Services">
-    <button className="primary-btn">Explore</button>
-  </Link>
+          <button className="homeservicesection-btn">Explore</button>
+        </Link>
       </div>
 
-      <div className="service-grid">
-        {/* Active Card */}
-        <div className="service-card active">
-          <div className="icon">G</div>
-          <h3>Google Ads</h3>
-          <p>
-            Effortlessly streamline your finances with our automated expense
-            tracking feature.
-          </p>
-          <span className="learn-more">
-            Learn more <span>→</span>
-          </span>
-        </div>
-
-        <div className="service-card">
-          <div className="icon">★</div>
-          <h3>Social Media</h3>
-          <p>
-            Effortlessly streamline your finances with our automated expense
-            tracking feature.
-          </p>
-          <span className="learn-more">
-            Learn more <span>→</span>
-          </span>
-        </div>
-
-        <div className="service-card">
-          <div className="icon">👥</div>
-          <h3>Human Resources</h3>
-          <p>
-            Effortlessly streamline your finances with our automated expense
-            tracking feature.
-          </p>
-          <span className="learn-more">
-            Learn more <span>→</span>
-          </span>
-        </div>
+      <div className="homeservicesection-grid">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={`homeservicesection-card ${activeIndex === index ? 'active' : ''}`}
+            onMouseEnter={() => setActiveIndex(index)}
+            onMouseLeave={() => setActiveIndex(0)} // back to first card when mouse leaves
+          >
+            <div className="homeservicesection-icon">
+              <img src={service.logo} alt={service.title} />
+            </div>
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
+            <span className="homeservicesection-learnmore">
+              Learn more <span>→</span>
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );

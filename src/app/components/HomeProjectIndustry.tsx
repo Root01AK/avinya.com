@@ -83,15 +83,14 @@ const HomeProjectIndustry = () => {
 
                 <div className="side-content">
                     <div className="tabs">
-                        <span className="active">Upcoming Events</span>
-                        <span>Online Sessions</span>
+                        <span className="active">Shaping Spaces, Building Futures</span>
                     </div>
                     <div className="stats">
-                        <strong>+34k</strong>
+                        <strong>Featured Projects</strong>
                     </div>
                     <p className="glass-text">
-                        Whether you're starting out or deepening your practice, Aroha welcomes you to a
-                        supportive community on a rejuvenating journey toward balance and inner peace.
+                        Whether it’s residential, commercial, or industrial developments, Avinya Construction Management partners with clients across industries to deliver expertly managed projects with precision, quality, and efficiency.
+                        <br/> +50 successfully delivered projects across diverse sectors, each reflecting our commitment to excellence, safety, and sustainable design.
                     </p>
                 </div>
             </div>
