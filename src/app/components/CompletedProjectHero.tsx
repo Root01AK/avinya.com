@@ -11,18 +11,16 @@ export default function ServiceHero() {
         <div className="service-hero-completed__content">
           <div className="service-hero-completed__text-content">
             <h1 className="service-hero-completed__title">
-              THE PERFECT PARTNER FOR YOUR REAL ESTATE NEEDS
+              The Perfect Partner for Your Construction & Real Estate Needs
             </h1>
           </div>
           
           <div className="service-hero-completed__description">
             <p>
-              At Realty, We Believe That Finding Your Dream Home Should Be An Enjoyable Experience. 
-              With Over 15 Years Of Experience, Our Team Of Dedicated Real Estate Professionals Is 
-              Committed To Providing You With Personalized And Comprehensive Services That Cater To 
-              Your Unique Needs. Whether You're Looking To Buy, Sell, Or Rent A Property, We Have 
-              The Expertise And Resources To Help You Achieve Your Goals. We Prioritize Customer 
-              Satisfaction And Strive To Build Lasting Relationships With Each Of Our Clients.
+              At Avinya Construction Management, we believe that successful construction is built on clarity, expertise, and trust. With years of hands-on industry experience, our team of dedicated professionals 
+              delivers structured construction management, design coordination, and execution excellence tailored to 
+              each project’s unique requirements. From residential and commercial developments to large-scale infrastructure projects,
+               we provide end-to-end solutions covering planning, budgeting, execution, and quality control. Our focus is on timely delivery, cost efficiency, and uncompromised quality.
             </p>
           </div>
         </div>

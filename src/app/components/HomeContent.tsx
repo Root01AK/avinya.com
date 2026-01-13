@@ -327,7 +327,7 @@ const HomeContent = () => {
             <img src="https://themexriver.com/wp/builta/wp-content/uploads/2024/05/p-1-arrow.webp" alt="Avinya Constructions" className="project-loading-img" />
 
             <div className="project-content">
-              <h1>Sangam Chettinad Indian Cuisine.</h1>
+              <h1>Sangam Chettinad Indian Cuisine. Leander</h1>
               <p>
                 Scope of work: Design, general contracting, procurement and
                 construction management.
@@ -360,7 +360,7 @@ const HomeContent = () => {
             <img src="https://themexriver.com/wp/builta/wp-content/uploads/2024/05/p-1-arrow.webp" alt="Avinya Constructions" className="project-loading-img" />
 
             <div className="project-content">
-              <h1>Dumont Round Rock.</h1>
+              <h1>⁠The Alley, Dripping Springs.</h1>
               <p>
                 Scope of work: General contractor. Completed all interior
                 renovation as per brand standards.

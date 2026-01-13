@@ -18,7 +18,7 @@ export default function ServiceChild() {
         <section className="service-child">
             {/* HEADER */}
             <div className="service-header">
-                <div className="year">2023</div>
+                <div className="year">2026</div>
                 <div className="nav-arrows">
                     <button>←</button>
                     <button>→</button>

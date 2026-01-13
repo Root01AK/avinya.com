@@ -754,16 +754,6 @@ body.menu-open {
   justify-content: space-between;
 }
 
-.highlight {
-  position: absolute;
-  top: 90px;
-  left: 30%;
-  font-size: 20px;
-  color: #000000;
-  opacity: 0.2;
-  font-weight: 300;
-  z-index: 1;
-}
 
 .main-title {
   font-size: 36px;
@@ -779,7 +769,6 @@ body.menu-open {
 .highlight-line {
   position: relative;
   display: block;
-  background: linear-gradient(90deg, transparent 0%, transparent 85%, #000000 85%, #000000 100%);
   background-repeat: no-repeat;
   background-size: 100% 2px;
   background-position: bottom;

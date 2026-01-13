@@ -25,8 +25,8 @@ const projectsData = [
     link: "https://www.instagram.com/avinya.constructions?igsh=MXMzOG8zOG5taWZ6Zg%3D%3D&utm_source=qr"
   },
   {
-    id: 5,
-    imageSrc: "/img/logo/AV NYA.jpg",
+    id: 3,
+    imageSrc: "/gallery/IMG_4961.JPG",
     title: "Bakery, Leander.",
     description: "New built 4200SF. restaurant and bar with 170 seating capacity. Scope of work: Pre-construction management, design management, procurement, general contracting.",
     link: "https://www.instagram.com/avinya.constructions?igsh=MXMzOG8zOG5taWZ6Zg%3D%3D&utm_source=qr"
@@ -51,14 +51,15 @@ export default function ProjectsPage() {
             {/* Project Description starts */}
       <div className="interior-card">
       <div className="card-content">
-        <div className="highlight">★</div>
         <h2 className="main-title">
-          We specialize in turning interior
+          Transforming Interior Design
           <br />
-          <span className="highlight-line">design dreams into Reality</span>
+          <span className="highlight-line">Visions into Refined Realities</span>
         </h2>
         <p className="description">
-          With bespoke designs tailored to your unique style and needs. From concept development to project management, we transform every space into a masterpiece of form and function.
+          We specialize in delivering thoughtfully designed interiors that reflect your unique style, purpose, and lifestyle. 
+          From concept development and detailed planning to execution and project management, 
+          we craft spaces that balance aesthetics, functionality, and lasting quality.
         </p>
         <button className="explore-button">EXPLORE MORE →</button>
       </div>
