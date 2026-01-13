@@ -7,7 +7,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HomeServices from "./HomeServices";
 import HomeProjectIndustry from "./HomeProjectIndustry";
-import HomeFeaturedProject from "./HomeFeaturedProject";
 import HomeTestimonialsSection from "./HomeTestimonailsSection";
 import ClientSection from "./ClientSection";
 import ClientInstagramSection from "./ClientInstagramSection";
@@ -187,8 +186,6 @@ const HomeContent = () => {
       <HomeServices />
       {/* HOME PROJECT INDUSTRY */}
       <HomeProjectIndustry />
-      {/* HOME FEATURED PROJECT */}
-      <HomeFeaturedProject />
       {/* Why Choose Us Starts */}
       <section className="why-choose-us mt-5 pt-5">
         <div className="container">
