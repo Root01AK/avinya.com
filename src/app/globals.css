@@ -4174,7 +4174,7 @@ body.menu-open {
 
 /* Terms Ends */
 
-
+/* Clients Starts Instagram  */
 
 .client-section {
   padding: 80px 6%;
@@ -4241,7 +4241,21 @@ body.menu-open {
 .client-card h3 {
   text-align: center;
   font-size: 18px;
-  margin-bottom: 12px;
+  font-weight: 600;
+  margin: 16px 0 12px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+/* subtle underline accent */
+.client-card h3::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #000;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 /* Instagram Embed Fix */
@@ -4250,6 +4264,136 @@ body.menu-open {
   max-width: 100% !important;
   border-radius: 18px !important;
 }
+@media (min-width: 1440px) {
+  .client-grid {
+    gap: 42px;
+  }
+}
+@media (max-width: 1024px) {
+  .client-section {
+    padding: 64px 5%;
+  }
+
+  .client-title {
+    font-size: 32px;
+  }
+
+  .client-subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .client-grid {
+    gap: 28px;
+  }
+
+  .client-filters button {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .client-section {
+    padding: 56px 16px;
+  }
+
+  .client-title {
+    font-size: 26px;
+  }
+
+  .client-subtitle {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .client-filters {
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .client-grid {
+    grid-template-columns: 1fr; /* force single column */
+    gap: 24px;
+  }
+
+  .client-card {
+    padding: 18px;
+  }
+
+  .client-card h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .client-title {
+    font-size: 22px;
+  }
+
+  .client-subtitle {
+    font-size: 13px;
+  }
+
+  .client-card h3::after {
+    width: 28px;
+  }
+}
+@media (max-width: 320px) {
+  .client-section {
+    padding: 48px 12px;
+  }
+
+  .client-title {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .client-subtitle {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  /* Filters */
+  .client-filters {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .client-filters button {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  /* Grid */
+  .client-grid {
+    gap: 20px;
+  }
+
+  /* Card */
+  .client-card {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .client-card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .client-card h3::after {
+    width: 24px;
+    height: 2px;
+  }
+
+  /* Instagram embed hard fix */
+  .instagram-media {
+    min-width: unset !important;
+    width: 100% !important;
+    transform: scale(0.95);
+    transform-origin: top center;
+  }
+}
+
+/* Clients Ends Instagram */
 /* Compeleted Project Child */
 .service-child {
   background: #ffffff;

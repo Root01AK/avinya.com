@@ -295,117 +295,83 @@ const HomeContent = () => {
       <HomeTestimonialsSection />
       <ClientInstagramSection />
 
-      <section className="latest-projects container mt-5">
-        <h1 className="text-center font-weight-bold ongopro-heading title mb-5">
-          EXPLORE OUR PROJECTS
-        </h1>
+     (
+    <div className="container mt-5">
+      <h1 className="text-center font-weight-bold ongopro-heading title mb-5">
+        EXPLORE OUR PROJECTS
+      </h1>
 
-        <div className="row mt-5">
+      <div className="row mt-5">
 
-          {/* PROJECT 1 */}
-          <div className="col-lg-6 col-md-6 col-sm-12 mb-4 wow animate__animated animate__bounceInUp" data-wow-duration="3s">
-            <div className="project-container">
-              <Image
-                src="/img/clients/Sangam.png"
-                alt="Sangam Chettinad Indian Cuisine"
-                className="project-img"
-                width={800}
-                height={500}
-              />
+        {/* PROJECT 1 */}
+        <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
+          <div className="project-container">
+            <Image
+              src="/img/clients/Sangam.png"
+              alt="Sangam-pic Avinya constructions"
+              className="project-img"
+              width={800}
+              height={500}
+            />
 
-              <a
-                href="https://www.instagram.com/avinya.constructions"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="connect-insta">
-                  <i className="fa fa-instagram"></i> Click Here for Current Updates.
-                </p>
-              </a>
+            <a
+              href="https://www.instagram.com/avinya.constructions"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="connect-insta">
+                <i className="fa fa-instagram"></i> Click Here for Current Updates.
+              </p>
+            </a>
 
-              <Image
-                src="/img/p-1-arrow.webp"
-                alt="Loading arrow"
-                className="project-loading-img"
-                width={120}
-                height={120}
-              />
+            <img src="https://themexriver.com/wp/builta/wp-content/uploads/2024/05/p-1-arrow.webp" alt="Avinya Constructions" className="project-loading-img" />
 
-              <div className="project-content">
-                <h1>Sangam Chettinad Indian Cuisine</h1>
-                <p>
-                  Scope of work: Design, general contracting, procurement and construction management.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* PROJECT 2 */}
-          <div className="col-lg-6 col-md-6 col-sm-12 mb-4 wow animate__animated animate__bounceInUp" data-wow-duration="3s">
-            <div className="project-container">
-              <Image
-                src="/img/icecream.jpg"
-                alt="Dumont Round Rock"
-                className="project-img"
-                width={800}
-                height={500}
-              />
-
-              <a
-                href="https://www.instagram.com/avinya.constructions"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="connect-insta">
-                  <i className="fa fa-instagram"></i> Click Here for Current Updates.
-                </p>
-              </a>
-
-              <Image
-                src="/img/p-1-arrow.webp"
-                alt="Loading arrow"
-                className="project-loading-img"
-                width={120}
-                height={120}
-              />
-
-              <div className="project-content">
-                <h1>Dumont Round Rock</h1>
-                <p>
-                  Scope of work: General contractor. Completed all interior renovation as per brand standards.
-                </p>
-              </div>
+            <div className="project-content">
+              <h1>Sangam Chettinad Indian Cuisine.</h1>
+              <p>
+                Scope of work: Design, general contracting, procurement and
+                construction management.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+
+        {/* PROJECT 2 */}
+        <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
+          <div className="project-container">
+            <Image
+              src="/img/icecream.jpg"
+              alt="Dumont Round Rock"
+              className="project-img"
+              width={800}
+              height={500}
+            />
+
+            <a
+              href="https://www.instagram.com/avinya.constructions"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="connect-insta">
+                <i className="fa fa-instagram"></i> Click Here for Current Updates.
+              </p>
+            </a>
+
+            <img src="https://themexriver.com/wp/builta/wp-content/uploads/2024/05/p-1-arrow.webp" alt="Avinya Constructions" className="project-loading-img" />
+
+            <div className="project-content">
+              <h1>Dumont Round Rock.</h1>
+              <p>
+                Scope of work: General contractor. Completed all interior
+                renovation as per brand standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
       {/* CLIENT SECTION */}
       <ClientSection />
-
-      {/* CLIENTS */}
-      {/* <div className="container clients mt-5">
-        <h2 className="title text-center mb-4">Our Clients</h2>
-
-        <div className="logos-slide d-flex gap-4 justify-content-center">
-          {[
-            "comfortinn.png",
-            "hiltoninn.svg",
-            "Sangam.png",
-            "Holidayinn.png",
-            "hyatthouse.jpg",
-            "starbucks.png",
-            "ups-logo.svg",
-          ].map((logo) => (
-            <img
-              key={logo}
-              src={`./clients/${logo}`}
-              alt="Client"
-              height={60}
-            />
-          ))}
-        </div>
-      </div> */}
-
     </main>
   );
 };
