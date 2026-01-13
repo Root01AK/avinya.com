@@ -43,7 +43,7 @@ export default function GalleryPage() {
       ? galleryData
       : galleryData.filter((item) => item.category === filter);
 
-    useEffect(() => {
+  useEffect(() => {
     const tl = gsap.timeline({ delay: 0.5 });
 
     tl.fromTo(
@@ -72,26 +72,26 @@ export default function GalleryPage() {
   return (
     <>
       {/* HERO */}
-    <section className="portfolio-banner">
-      <div className="portfolio-banner-inner">
-        <h1 className="wave-text">
-          {text.split('').map((char, i) => (
-            <span
-              key={i}
-              ref={(el) => {
-                if (el) lettersRef.current[i] = el;
-              }}
-            >
-              {char}
-            </span>
-          ))}
-        </h1>
+      <section className="portfolio-banner">
+        <div className="portfolio-banner-inner">
+          <h1 className="wave-text">
+            {text.split('').map((char, i) => (
+              <span
+                key={i}
+                ref={(el) => {
+                  if (el) lettersRef.current[i] = el;
+                }}
+              >
+                {char}
+              </span>
+            ))}
+          </h1>
 
-        <p ref={taglineRef} className="portfolio-tagline">
-          DON&apos;T WORRY. MELT YOUR MIND. CHILL OUT.
-        </p>
-      </div>
-    </section>
+          <p ref={taglineRef} className="portfolio-tagline">
+            DON&apos;T WORRY. MELT YOUR MIND. CHILL OUT.
+          </p>
+        </div>
+      </section>
 
       {/* FILTER */}
       <div className="container my-5">
@@ -112,25 +112,25 @@ export default function GalleryPage() {
         </ul>
 
         {/* GRID */}
-<div className="gallery-grid">
-  {filteredItems.map((item, index) => {
-    const isLarge = index % 6 === 0;
+        <div className="gallery-grid">
+          {filteredItems.map((item, index) => {
+            const isLarge = index % 6 === 0;
 
-    return (
-      <div
-        key={index}
-        className={`gallery-card ${isLarge ? 'card-large' : ''}`}
-        onClick={() => setModalImage(item.src)}
-      >
-        <img src={item.src} alt={item.title} />
-        <div className="gallery-overlay">
-          <span className="category">{item.category}</span>
-          <h3>{item.title}</h3>
+            return (
+              <div
+                key={index}
+                className={`gallery-card ${isLarge ? 'card-large' : ''}`}
+                onClick={() => setModalImage(item.src)}
+              >
+                <img src={item.src} alt={item.title} />
+                <div className="gallery-overlay">
+                  <span className="category">{item.category}</span>
+                  <h3>{item.title}</h3>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
-    );
-  })}
-</div>
 
 
       </div>

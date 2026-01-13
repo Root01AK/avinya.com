@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Metadata } from "next";
 import { useState } from "react";
-import ServiceHero from '../components/ServiceHero';
+import ServiceHero from '../components/CompletedProjectHero';
 
 const completedProjects = [
   {
@@ -178,22 +178,19 @@ export default function CompletedProjects() {
               {/* CONTENT */}
               <div className="projects-content">
                 <h2 className="project-title">{item.city}</h2>
-
                 <div className="project-location">
                   📍 <span>{item.location}</span>
                 </div>
-
                 <p className="project-subtitle">{item.classType}</p>
-
                 <p className="project-description">
                   {item.description}
                 </p>
-
                 <div className="project-actions">
-                  <button className="search-btn">View More</button>
+                  <Link href="/CompletedProjectChild">
+                    <button className="search-btn">View More</button>
+                  </Link>
                 </div>
               </div>
-
             </div>
           );
         })}

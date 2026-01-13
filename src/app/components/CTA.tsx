@@ -18,11 +18,11 @@ const CTA = () => {
 
         {/* Center Content */}
         <div className="cta-content">
-          <span className="cta-label">✦ CONTACT ✦</span>
+          <span className="cta-label">✦ Transform Your Vision into Reality. ✦</span>
 
           <h2 className="cta-title">
-            Take the First Step & Transform <br />
-            <span>Your Vision into Reality!</span>
+            Partner with Avinya Construction Management for expert planning, <br />
+            <span>precise execution, and reliable delivery.</span>
           </h2>
 
           <button className="cta-button">

@@ -1,5 +1,5 @@
 'use client';
-
+import Link from "next/link";
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -43,7 +43,9 @@ const HomeServices = () => {
             Elevate Your Online Presence and Boost Your Success.
           </p>
         </div>
-        <button className="primary-btn">Explore</button>
+        <Link href="/Services">
+    <button className="primary-btn">Explore</button>
+  </Link>
       </div>
 
       <div className="service-grid">

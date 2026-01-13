@@ -4,36 +4,42 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const categories = [
-  "General Information",
-  "Purchasing and Payment",
-  "Plans and Pricing",
-  "Setup and Configuration",
+  "Services & Expertise",
+  "Project Planning & Execution",
+  "Cost, Budget & Contract",
+  "Quality, Safety & Compliance",
 ];
 
 const faqsData = [
   {
-    category: "General Information",
-    question: "What is Joy?",
+    category: "Services & Expertise",
+    question: "What services does Avinya Construction Management provide?",
     answer:
-      "Joy is an AI voice assistant designed to handle calls, book appointments, and answer queries like a human operator.",
+      "Avinya Construction Management offers end-to-end construction and project management services, including planning, budgeting, scheduling, vendor coordination, site supervision, quality control, and project delivery.",
   },
   {
-    category: "General Information",
-    question: "How does Joy work?",
+    category: "Project Planning & Execution",
+    question: "How do you ensure project quality and timelines?",
     answer:
-      "Joy uses AI-driven conversational workflows to understand and respond in real time.",
+      "We follow a structured construction management process with defined milestones, regular site inspections, and strict quality checks. Our team closely monitors timelines and coordinates with contractors to ensure on-time, high-quality execution.",
   },
   {
-    category: "Plans and Pricing",
-    question: "Do you offer flexible pricing?",
+    category: "Cost, Budget & Contracts",
+    question: "Do you handle residential and commercial projects?",
     answer:
-      "Yes, Joy offers flexible pricing based on usage and business needs.",
+      "Yes, we manage a wide range of projects, including residential, commercial, and mixed-use developments, tailoring our approach to meet the specific requirements of each project.",
   },
   {
-    category: "Setup and Configuration",
-    question: "Is setup complicated?",
+    category: "Quality, Safety & Compliance",
+    question: "How do you manage project costs and budgets?",
     answer:
-      "No, setup is simple and can be completed within minutes.",
+      "We focus on transparent budgeting, cost planning, and continuous cost monitoring throughout the project lifecycle. This helps control expenses, minimize overruns, and deliver maximum value without compromising quality.",
+  },
+    {
+    category: "Services & Expertise",
+    question: "How can I start a project with Avinya Construction Management?",
+    answer:
+      "You can get started by contacting us through our website or phone. Our team will discuss your requirements, evaluate your project scope, and guide you through the next steps for a smooth project kickoff.",
   },
 ];
 
@@ -72,9 +78,9 @@ const Faqs = () => {
   return (
     <section className="faqs">
       <div className="faq-header">
-        <span className="faq-badge">Fill Every Call with Joy</span>
+        <span className="faq-badge">Construction Made Simple</span>
         <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know about Joy.</p>
+        <p>All the essential details about our services, process, and project delivery.</p>
       </div>
 
       <div className="faq-layout">

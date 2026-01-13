@@ -3,28 +3,28 @@ import React from "react";
 
 const services = [
   {
-    title: "Customizable Theme",
+    title: "Comprehensive Project Management",
     description:
-      "Personalize your Snappy experience with a variety of themes, allowing you to tailor the app to match your unique lifestyle.",
-    image: "/services/theme.jpg",
+      "End-to-end construction management covering planning, scheduling, budgeting, vendor coordination, and site supervision for smooth project delivery.",
+    image: "/gallery/hotel 01.jpg",
   },
   {
-    title: "Secure File Sharing",
+    title: "Quality-Driven Execution",
     description:
-      "Snappy ensures the security of your business conversations with end-to-end encryption.",
-    image: "/services/file-sharing.jpg",
+      "We ensure strict quality control at every stage, using proven construction practices, certified materials, and experienced professionals.",
+    image: "/gallery/hotel 02.jpg",
   },
   {
-    title: "Health Reminders",
+    title: "Cost & Time Optimization",
     description:
-      "Stay on top of your wellness routine with scheduled messages and reminders for self-care and health-related activities.",
-    image: "/services/health.jpg",
+      "Smart planning and disciplined execution help reduce delays, control costs, and maximize project value without compromising quality.",
+    image: "/gallery/hotel 03.jpg",
   },
   {
-    title: "Secure Communication",
+    title: "Safety & Compliance",
     description:
-      "Communicate securely with service providers for inquiries, updates, and feedback, all within the Snappy app.",
-    image: "/services/secure-chat.jpg",
+      "We follow industry-best safety standards and regulatory compliance to deliver secure, risk-managed construction environments.",
+    image: "/gallery/hotel 04.jpg",
   },
 ];
 
@@ -34,14 +34,13 @@ const ServiceHeroCard = () => {
       {/* Hero Text */}
       <div className="service-hero-header">
         <h1>
-          Elevate Your Chatting,
+          Elevate Your Construction,
           <br />
-          Simplify Your Life
+          Simplify Project Delivery
         </h1>
 
         <p>
-          Discover a Seamless World of Professional Services,
-          Appointments, and Secure Transactions – All in One Place!
+          Experience seamless construction management, expert execution, and transparent coordination — all under one trusted partner.
         </p>
       </div>
 
@@ -62,11 +61,11 @@ const ServiceHeroCard = () => {
 
       {/* Next Section Title */}
       <div className="service-footer">
-        <span className="service-label">Services</span>
+        <span className="service-label">Our Core Offerings</span>
         <h2>
-          Elevate Every Experience, Simplify
+          Building Excellence.
           <br />
-          Your Everyday Needs.
+          Managing with Precision.
         </h2>
       </div>
     </section>
