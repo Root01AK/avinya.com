@@ -10,10 +10,10 @@ const Topbar = () => {
             <div className="h-100 d-inline-flex align-items-center me-3 topcontact">
               <a className="text-body px-2" href="tel:+15122164230">
                 {/* Note: Ensure FontAwesome CSS is loaded in your layout for these icons to show */}
-                <i className="fa fa-phone-alt text-primary me-2"></i>+1(512)216 4230
+                <i className="fa fa-phone-alt me-2" style={{ color: '#F4BA1A' }}></i>+1(512)216 4230
               </a>
               <a className="text-body px-2" href="mailto:sanjai@avinyaconstructions.com">
-                <i className="fa fa-envelope-open text-primary me-2"></i>avinya@avinyaconstructions.com
+                <i className="fa fa-envelope-open me-2" style={{ color: '#F4BA1A' }}></i>avinya@avinyaconstructions.com
               </a>
             </div>
           </div>

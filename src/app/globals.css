@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+
 *{
     margin: 0;
     padding: 0;
@@ -383,6 +384,7 @@ body.menu-open {
 .navbar {
   padding: 10px 15px;
   background-color: #fff;
+  height: 180px;
 }
 
 .navbar-brand {
@@ -769,6 +771,7 @@ body.menu-open {
 .highlight-line {
   position: relative;
   display: block;
+
   background-repeat: no-repeat;
   background-size: 100% 2px;
   background-position: bottom;
