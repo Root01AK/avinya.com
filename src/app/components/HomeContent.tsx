@@ -130,9 +130,9 @@ const HomeContent = () => {
       {/* HERO SECTION */}
       <div className="hero-site">
         <video autoPlay loop muted playsInline className="back-video">
-          <source src="/video/hero.mp4" type="video/mp4" />
-          <source src="/video/hero.webm" type="video/webm" />
-          <source src="/video/hero.ogv" type="video/ogg" />
+          <source src="./video/hero.mp4" type="video/mp4" />
+          <source src="./video/hero.webm" type="video/webm" />
+          <source src="./video/hero.ogv" type="video/ogg" />
         </video>
 
         <div className="wave-container">
