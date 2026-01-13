@@ -7,9 +7,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
-  { logo: '/logo/logo.png', title: 'Pre-Construction Services', desc: 'Integrated Construction Management, Design & Engineering, and Pre-Construction Solutions for Seamless Project Delivery.' },
-  { logo: '/logo/logo.png', title: 'Design and Engineering', desc: 'From Design & Engineering to Pre-Construction Planning and Full Construction Management — We Cover Every Step.' },
-  { logo: '/logo/logo.png', title: 'Construction Management', desc: 'Integrated Construction Management, Design & Engineering, and Pre-Construction Solutions for Seamless Project Delivery.' },
+  { logo: '/Logo/logo.png', title: 'Pre-Construction Services', desc: 'Integrated Construction Management, Design & Engineering, and Pre-Construction Solutions for Seamless Project Delivery.' },
+  { logo: '/Logo/logo.png', title: 'Design and Engineering', desc: 'From Design & Engineering to Pre-Construction Planning and Full Construction Management — We Cover Every Step.' },
+  { logo: '/Logo/logo.png', title: 'Construction Management', desc: 'Integrated Construction Management, Design & Engineering, and Pre-Construction Solutions for Seamless Project Delivery.' },
 ];
 
 const HomeServices = () => {
