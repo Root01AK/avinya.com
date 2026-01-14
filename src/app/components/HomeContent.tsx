@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HomeServices from "./HomeServices";
 import HomeProjectIndustry from "./HomeProjectIndustry";
-import HomeTestimonialsSection from "./HomeTestimonailsSection";
+// import HomeTestimonialsSection from "./HomeTestimonailsSection";
 import ClientSection from "./ClientSection";
 import ClientInstagramSection from "./ClientInstagramSection";
 
@@ -292,10 +292,10 @@ const HomeContent = () => {
       </section>
       {/* Why Choose Us Ends */}
       {/* HOME TESTIMONIALS */}
-      <HomeTestimonialsSection />
+      {/* <HomeTestimonialsSection /> */}
       <ClientInstagramSection />
 
-     (
+     
     <div className="container mt-5">
       <h1 className="text-center font-weight-bold ongopro-heading title mb-5">
         EXPLORE OUR PROJECTS
